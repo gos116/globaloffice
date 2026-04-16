@@ -3,33 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HOMEPAGE - GLOBAL OFFICE</title>
-  <meta name="description" content="GLOBAL OFFICE Coworking Space - More than just a space, we are collaborative space. Berlokasi di Surakarta, Jawa Tengah." />
+  <title>HOMEPAGE - GLOBAL OFFICE SPACE</title>
+  <meta name="description" content="GLOBAL OFFICE SPACE  - Upgrade Bisnismu dengan, <strong> Ruang Kantor Profesional </strong>. Berlokasi di Surakarta, Jawa Tengah." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --cream: #F5F0E8;
-      --warm-white: #FAFAF7;
-      --sand: #E8DFD0;
-      --taupe: #C4B49A;
-      --brown: #8B6F4E;
-      --dark-brown: #3D2B1A;
-      --charcoal: #2A2520;
-      --green: #4A5E45;
-      --green-light: #6B8C64;
-      --accent: #C17F3E;
-      --text: #2A2520;
-      --text-muted: #7A6E65;
-    }
+  /* ===== BASE BACKGROUND ===== */
+  --cream: #FFFFFF;
+  --warm-white: #F8F6F2;
+  --sand: #EEE8DF;
 
+  /* ===== TEXT & DARK ===== */
+  --text: #1F1F1F;
+  --text-muted: #6F6A63;
+
+  --dark-brown: #1E1B18;
+  --charcoal: #2A2622;
+
+  /* ===== NEUTRAL ===== */
+  --taupe: #BFB7AC;
+  --border: #D6D0C7;
+
+  /* ===== BRAND (SAGE) ===== */
+  --green: #4F6B57;
+  --green-light: #6F8C78;
+
+  /* ===== ACCENT ===== */
+  --accent: #A67C52;
+}
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--warm-white);
       color: var(--text);
       overflow-x: hidden;
@@ -58,7 +67,7 @@
     nav.scrolled { padding: 0.8rem 5%; }
 
     .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.6rem;
       font-weight: 600;
       letter-spacing: 0.05em;
@@ -160,7 +169,7 @@
     }
 
     .hero-heading {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(2.4rem, 4.5vw, 3.8rem);
       font-weight: 300;
       line-height: 1.15;
@@ -307,7 +316,7 @@
     }
 
     .section-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 3.5vw, 3rem);
       font-weight: 400;
       color: var(--dark-brown);
@@ -356,7 +365,7 @@
     }
 
     .about-card h4 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
       font-weight: 600;
       color: var(--dark-brown);
@@ -405,7 +414,7 @@
     .service-icon { font-size: 2rem; margin-bottom: 1rem; }
 
     .service-card h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       font-weight: 600;
       color: var(--cream);
@@ -424,7 +433,7 @@
     }
 
     .service-price .amount {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 2rem;
       font-weight: 600;
       color: var(--accent);
@@ -499,7 +508,7 @@
     .benefit-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
 
     .benefit-item h4 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1rem;
       font-weight: 600;
       color: var(--dark-brown);
@@ -586,7 +595,7 @@
     }
 
     .blog-card-body h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.15rem;
       font-weight: 600;
       color: var(--dark-brown);
@@ -700,7 +709,7 @@
       padding: 0.65rem 1rem;
       color: var(--cream);
       font-size: 0.85rem;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       outline: none;
       flex: 1;
     }
@@ -818,7 +827,7 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a class="nav-logo" href="#homepage">GLOBAL <span>Office</span></a>
+  <a class="nav-logo" href="#homepage">GLOBAL <span>OFFICE SPACE</span></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#homepage">Home</a></li>
     <li><a href="#about">About</a></li>
