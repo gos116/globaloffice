@@ -90,15 +90,36 @@
       list-style: none;
     }
     .nav-links a {
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--primary); }
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--taupe); /* default taupe */
+  text-decoration: none;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+/* HOVER → PUTIH */
+.nav-links a:hover {
+  color: white;
+}
+
+/* UNDERLINE PREMIUM */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
  
     .nav-wa {
       background: var(--primary) !important;
