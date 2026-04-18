@@ -37,7 +37,7 @@
     }
  
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; font-size: 16px; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--cream);
@@ -157,7 +157,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 8rem 5% 4rem;
+      padding: 6rem 5% 4rem;
       gap: 4rem;
       background: var(--sand);
       position: relative;
@@ -292,7 +292,7 @@
     .hero-img-thumbs div:hover img { transform: scale(1.05); }
  
     /* ─── ABOUT ─── */
-    #about { padding: 4rem 5%; background: var(--warm-white); }
+    #about { padding: 6rem 5%; background: var(--warm-white); }
  
     .section-label {
       font-size: 0.72rem;
@@ -351,7 +351,7 @@
     }
  
     /* ─── SERVICES ─── */
-    #services { padding: 4rem 5%; background: var(--dark); }
+    #services { padding: 6rem 5%; background: var(--dark); }
     #services .section-label { color: var(--neutral); }
     #services .section-title { color: var(--white); margin-bottom: 3rem; }
  
@@ -428,7 +428,7 @@
     .btn-service:hover { color: white; border-color: white; }
  
     /* ─── BENEFITS ─── */
-    #benefits { padding: 4rem 5%; background: var(--bg-section); }
+    #benefits { padding: 6rem 5%; background: var(--bg-section); }
     #benefits .section-title { text-align: center; margin-bottom: 0.5rem; color: var(--text-primary); }
     #benefits .section-label { text-align: center; }
     .benefits-subtitle {
@@ -438,10 +438,22 @@
       margin-bottom: 4rem;
     }
     .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 1.25rem;
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 per baris */
+  gap: 1.25rem;
+}
+
+/* BIAR TINGGI KOTAK RATA */
+.benefit-item {
+  min-height: 120px;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
     .benefit-item {
       background: var(--bg-main);
       border: 1px solid var(--border);
@@ -471,7 +483,7 @@
     .benefit-item:hover .benefit-link { color: var(--accent); }
  
     /* ─── GALLERY ─── */
-    #gallery { padding: 4rem 5%; background: var(--warm-white); }
+    #gallery { padding: 6rem 5%; background: var(--warm-white); }
     #gallery .section-label { text-align: center; }
     #gallery .section-title { text-align: center; color: var(--text); margin-bottom: 0.5rem; }
     .gallery-subtitle {
@@ -515,7 +527,7 @@
     .gallery-caption p { font-size: 0.8rem; color: var(--text-muted); }
  
     /* ─── CONTACT ─── */
-    #contact { padding: 4rem 5%; background: var(--bg-section); }
+    #contact { padding: 6rem 5%; background: var(--bg-section); }
     .contact-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -560,7 +572,7 @@
     /* ─── FOOTER ─── */
     footer {
       background: var(--dark);
-      padding: 4rem 5% 2rem;
+      padding: 6rem 5% 2rem;
       border-top: 1px solid rgba(255,255,255,0.05);
     }
     .footer-top {
@@ -834,16 +846,84 @@
     Kami menyediakan ruang kerja lengkap dengan fasilitas terbaik, sehingga Anda bisa fokus pada perkembangan bisnis tanpa perlu repot mengurus hal teknis.
   </p>
   <div class="benefits-grid">
-    <div class="benefit-item"><div class="benefit-icon">🪑</div><h4>Ruang Siap Pakai</h4><div class="benefit-link">Siap digunakan tanpa setup</div></div>
-    <div class="benefit-item"><div class="benefit-icon">❄️</div><h4>Ruangan Ber-AC</h4><div class="benefit-link">Nyaman untuk bekerja seharian</div></div>
-    <div class="benefit-item"><div class="benefit-icon">📶</div><h4>High Speed WiFi</h4><div class="benefit-link">Koneksi up to 100mbps</div></div>
-    <div class="benefit-item"><div class="benefit-icon">⚡</div><h4>Include Listrik & Air</h4><div class="benefit-link">Tanpa biaya tambahan</div></div>
-    <div class="benefit-item"><div class="benefit-icon">☕</div><h4>Free Kopi & Teh</h4><div class="benefit-link">Temani produktivitas Anda</div></div>
-    <div class="benefit-item"><div class="benefit-icon">🅿️</div><h4>Parkir Gratis</h4><div class="benefit-link">Akses mudah untuk Anda & klien</div></div>
-    <div class="benefit-item"><div class="benefit-icon">🌿</div><h4>Smoking Area</h4><div class="benefit-link">Area khusus yang nyaman</div></div>
-    <div class="benefit-item"><div class="benefit-icon">🕌</div><h4>Mushola</h4><div class="benefit-link">Fasilitas ibadah yang nyaman</div></div>
-    <div class="benefit-item"><div class="benefit-icon">🏛️</div><h4>Alamat Bisnis Resmi</h4><div class="benefit-link">Meningkatkan kredibilitas usaha</div></div>
+
+  <!-- PRIORITAS UTAMA -->
+  <div class="benefit-item">
+    <div class="benefit-icon">📶</div>
+    <h4>High Speed WiFi</h4>
+    <div class="benefit-link">Koneksi stabil hingga 100 Mbps</div>
   </div>
+
+  <div class="benefit-item">
+    <div class="benefit-icon">🪑</div>
+    <h4>Ruang Siap Pakai</h4>
+    <div class="benefit-link">Langsung digunakan tanpa setup</div>
+  </div>
+
+  <div class="benefit-item">
+    <div class="benefit-icon">❄️</div>
+    <h4>Ruangan Ber-AC</h4>
+    <div class="benefit-link">Nyaman untuk bekerja seharian</div>
+  </div>
+
+  <div class="benefit-item">
+    <div class="benefit-icon">⚡</div>
+    <h4>Include Listrik & Air</h4>
+    <div class="benefit-link">Tanpa biaya tambahan</div>
+  </div>
+
+  <!-- TRUST & IMAGE -->
+  <div class="benefit-item">
+    <div class="benefit-icon">🏛️</div>
+    <h4>Alamat Bisnis Resmi</h4>
+    <div class="benefit-link">Meningkatkan kredibilitas usaha</div>
+  </div>
+
+  <div class="benefit-item">
+    <div class="benefit-icon">🧑‍💼</div>
+    <h4>Receptionist</h4>
+    <div class="benefit-link">Melayani tamu & kebutuhan administrasi</div>
+  </div>
+
+  <!-- OPERASIONAL -->
+  <div class="benefit-item">
+    <div class="benefit-icon">🧹</div>
+    <h4>Office Boy</h4>
+    <div class="benefit-link">Menjaga kebersihan & kenyamanan</div>
+  </div>
+
+  <div class="benefit-item">
+    <div class="benefit-icon">🖨️</div>
+    <h4>Printer & Scanner</h4>
+    <div class="benefit-link">Cetak dokumen untuk kebutuhan bisnis</div>
+  </div>
+
+  <!-- SUPPORT -->
+  <div class="benefit-item">
+    <div class="benefit-icon">☕</div>
+    <h4>Free Kopi & Teh</h4>
+    <div class="benefit-link">Temani produktivitas Anda</div>
+  </div>
+
+  <div class="benefit-item">
+    <div class="benefit-icon">🅿️</div>
+    <h4>Parkir Gratis</h4>
+    <div class="benefit-link">Akses mudah untuk Anda & klien</div>
+  </div>
+
+  <div class="benefit-item">
+    <div class="benefit-icon">🌿</div>
+    <h4>Smoking Area</h4>
+    <div class="benefit-link">Area khusus yang nyaman</div>
+  </div>
+
+  <div class="benefit-item">
+    <div class="benefit-icon">🕌</div>
+    <h4>Mushola</h4>
+    <div class="benefit-link">Fasilitas ibadah yang nyaman</div>
+  </div>
+
+</div>
 </section>
  
 <!-- GALLERY -->
