@@ -65,7 +65,12 @@
 
   transition: all 0.3s ease;
 }
-    nav.scrolled { padding: 0.8rem 5%; }
+    nav.scrolled {
+  background: rgba(42, 38, 34, 0.7); /* transparan saat scroll */
+  backdrop-filter: blur(12px);
+  padding: 0.9rem 5%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
  
     .nav-logo {
       font-family: 'Playfair Display', serif;
