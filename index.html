@@ -535,34 +535,38 @@
       border-color: rgba(166,124,82,0.3);
     }
     .gallery-img {
-  width: 100%;
-  aspect-ratio: 4/3; /* 🔥 ini yang bikin ukuran jadi normal */
-  overflow: hidden;
-  border-radius: 12px;
- background: var(--sand); }
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 12px 12px 0 0;
+      background: var(--sand);
+      position: relative;
+    }
     .gallery-img img {
       width: 100%; height: 100%;
       object-fit: cover;
       transition: transform 0.4s ease;
     }
- .gallery-img.slider {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-}
-
-.slider-track {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease;
-}
-
-.slider-track img {
-  min-width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .gallery-img.slider {
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+    .slider-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease;
+      position: absolute;
+      top: 0; left: 0;
+    }
+    .slider-track img {
+      min-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
     .gallery-item:hover img { transform: scale(1.05); }
     .gallery-caption { padding: 1rem 1.2rem; }
     .gallery-caption h4 {
@@ -986,12 +990,13 @@
   <!-- PRIVATE OFFICE -->
   <div class="gallery-item">
     <div class="gallery-img slider">
-        <div class="slider-track">
-          <img src="image/po 2.png">
-          <img src="image/po 1.png">
-          <img src="image/po 3.png">
-          <img src="image/po 4.png">
-          <img src="image/po 5.jpeg">
+      <div class="slider-track">
+        <img src="image/po 2.png" alt="Private Office 1">
+        <img src="image/po 1.png" alt="Private Office 2">
+        <img src="image/po 3.png" alt="Private Office 3">
+        <img src="image/po 4.png" alt="Private Office 4">
+        <img src="image/po 5.jpeg" alt="Private Office 5">
+      </div>
     </div>
     <div class="gallery-caption">
       <h4>Private Office</h4>
@@ -1002,10 +1007,11 @@
   <!-- MEETING ROOM -->
   <div class="gallery-item">
     <div class="gallery-img slider">
-    <div class="slider-track">
-      <img src="image/mr 2.png">
-      <img src="image/mr 3.png">
-      <img src="image/mr 1.png">
+      <div class="slider-track">
+        <img src="image/mr 2.png" alt="Meeting Room 1">
+        <img src="image/mr 3.png" alt="Meeting Room 2">
+        <img src="image/mr 1.png" alt="Meeting Room 3">
+      </div>
     </div>
     <div class="gallery-caption">
       <h4>Meeting Room</h4>
@@ -1016,10 +1022,11 @@
   <!-- VIRTUAL OFFICE -->
   <div class="gallery-item">
     <div class="gallery-img slider">
-    <div class="slider-track">
-      <img src="image/vo 3.png">
-      <img src="image/vo 2.png">
-      <img src="image/vo 1.png">
+      <div class="slider-track">
+        <img src="image/vo 3.png" alt="Virtual Office 1">
+        <img src="image/vo 2.png" alt="Virtual Office 2">
+        <img src="image/vo 1.png" alt="Virtual Office 3">
+      </div>
     </div>
     <div class="gallery-caption">
       <h4>Virtual Office</h4>
@@ -1030,11 +1037,12 @@
   <!-- FACILITIES -->
   <div class="gallery-item">
     <div class="gallery-img slider">
-    <div class="slider-track">
-      <img src="image/fo 1.png">
-      <img src="image/fo 2.png">
-      <img src="image/fo 3.png">
-      <img src="image/fo 4.png">
+      <div class="slider-track">
+        <img src="image/fo 1.png" alt="Fasilitas 1">
+        <img src="image/fo 2.png" alt="Fasilitas 2">
+        <img src="image/fo 3.png" alt="Fasilitas 3">
+        <img src="image/fo 4.png" alt="Fasilitas 4">
+      </div>
     </div>
     <div class="gallery-caption">
       <h4>Fasilitas</h4>
