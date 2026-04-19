@@ -540,6 +540,17 @@
       object-fit: cover;
       transition: transform 0.4s ease;
     }
+    .gallery-img.slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-img.slider img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
     .gallery-item:hover img { transform: scale(1.05); }
     .gallery-caption { padding: 1rem 1.2rem; }
     .gallery-caption h4 {
@@ -954,37 +965,68 @@
 <section id="gallery">
   <div class="section-label">Gallery</div>
   <h2 class="section-title">Suasana Global Office Space</h2>
-  <p class="gallery-subtitle">Lihat langsung fasilitas dan kenyamanan ruang kerja kami di pusat kota Surakarta.</p>
+  <p class="gallery-subtitle">
+    Lihat langsung fasilitas dan kenyamanan ruang kerja kami di pusat kota Surakarta.
+  </p>
+
   <div class="gallery-grid">
-    <div class="gallery-item">
-      <div class="gallery-img">
-        <img src="images/private-office.jpg" alt="Private Office"
-             onerror="this.src='https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=600&q=80'" />
-      </div>
-      <div class="gallery-caption"><h4>Private Office</h4><p>Ruang kerja privat yang nyaman dan profesional</p></div>
+
+  <!-- PRIVATE OFFICE -->
+  <div class="gallery-item">
+    <div class="gallery-img slider">
+      <img src="image/po 2.png">
+      <img src="image/po 1.png">
+      <img src="image/po 3.png">
+      <img src="image/po 4.png">
+      <img src="image/po 5.png">
     </div>
-    <div class="gallery-item">
-      <div class="gallery-img">
-        <img src="images/meeting-room.jpg" alt="Meeting Room"
-             onerror="this.src='https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80'" />
-      </div>
-      <div class="gallery-caption"><h4>Meeting Room</h4><p>Ruang meeting modern untuk tim dan klien</p></div>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-img">
-        <img src="images/office-area.jpg" alt="Office Area"
-             onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80'" />
-      </div>
-      <div class="gallery-caption"><h4>Area Kantor</h4><p>Lingkungan kerja nyaman di lokasi strategis</p></div>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-img">
-        <img src="images/facilities.jpg" alt="Facilities"
-             onerror="this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80'" />
-      </div>
-      <div class="gallery-caption"><h4>Fasilitas</h4><p>Fasilitas lengkap untuk menunjang bisnis</p></div>
+    <div class="gallery-caption">
+      <h4>Private Office</h4>
+      <p>Ruang kerja privat yang nyaman dan profesional</p>
     </div>
   </div>
+
+  <!-- MEETING ROOM -->
+  <div class="gallery-item">
+    <div class="gallery-img slider">
+      <img src="image/mr 2.png">
+      <img src="image/mr 3.png">
+      <img src="image/mr 1.png">
+    </div>
+    <div class="gallery-caption">
+      <h4>Meeting Room</h4>
+      <p>Ruang meeting modern untuk tim dan klien</p>
+    </div>
+  </div>
+
+  <!-- VIRTUAL OFFICE -->
+  <div class="gallery-item">
+    <div class="gallery-img slider">
+      <img src="image/vo 3.png">
+      <img src="image/vo 2.png">
+      <img src="image/vo 1.png">
+    </div>
+    <div class="gallery-caption">
+      <h4>Virtual Office</h4>
+      <p>Alamat bisnis strategis & profesional</p>
+    </div>
+  </div>
+
+  <!-- FACILITIES -->
+  <div class="gallery-item">
+    <div class="gallery-img slider">
+      <img src="image/fo 1.png">
+      <img src="image/fo 2.png">
+      <img src="image/fo 3.png">
+      <img src="image/fo 4.png">
+    </div>
+    <div class="gallery-caption">
+      <h4>Fasilitas</h4>
+      <p>Fasilitas lengkap untuk menunjang bisnis</p>
+    </div>
+  </div>
+
+</div>
 </section>
  
 <!-- CONTACT -->
@@ -1097,6 +1139,17 @@ document.querySelectorAll('.service-card').forEach(card => {
       card.style.setProperty('--y', y + 'px');
     });
   });
+</script>
+  <script>
+document.querySelectorAll('.slider').forEach(slider => {
+  let index = 0;
+  const images = slider.querySelectorAll('img');
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }, 2500); // ganti ke 2000 kalau mau lebih cepat
+});
 </script>
 </body>
 </html>
